@@ -79,7 +79,7 @@ resource "aws_subnet" "lunx_public_subnet" {
   }
 }
 
-resource "aws_subnet" "mtc_private_subnet" {
+resource "aws_subnet" "lunx_private_subnet" {
   count                   = var.private_sn_count
   vpc_id                  = aws_vpc.lunx_vpc.id
   cidr_block              = var.private_cidrs[count.index]
